@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f2f4f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0c0f0c" media="(prefers-color-scheme: dark)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="间歇计时器" />
+    <link rel="icon" href="data:," />
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFeUlEQVR4nO3dMZLbRhBG4VmXL6BSoMDh6jaKfUrFvo021D0cwIVCmdvkAOjp/nvmfanLMtB4boAUi3z7+u1LAz7zR/YBQBdxwEQcMBEHTMQBE3HARBwwEQdMxAETccBEHDD9mX0Acf7652+vP+r3j59ef5QyNgdMxAETccBEHDARB0zEARNxwEQcMBEHTMQBE3HARBwwEQdMxAETccBEHDARB0zEAdPbCl/B4PgBwaPpPyw4bRyDgrBMGcpscQQ38WimSiaJI72JRxNUUj4OwSyOSidSNQ7xJh5VrKReHOWyOKqVSLH3OUqX0aodf5nNUWusL5VYIQXiUHgLS+EY4qnH4XVV3C+D7IE50o3DZfoBo69ynBeIxnFn4omDLnrYFsU4Lo9YZL7Vj3+nFcc0Y21TnItQHNemqTPKT5U+KZU4LgxRZII9ip6dRBxnZ6cwuAvKnWZ+HKdGlj6v+wqdb/LfrRSalBeFd2Y7ZcaxYBmbKn2k3Vb6z3mmLP5HfAg5m0N8KGH6zy5lfyTEQRlHyn1Ex0EZj2T7EP0k2DplbDTPNzSOzvA1JzVa51lHLo+4OCjjJbU+guKgjE5SfQj93kpWGR+/Pqx/9P79PfJINr9//BT5NHXE5ug5VXbGUc80AgIaHgdlXKPQh+hLWSgYGwdr44705ZG8OSjjuWk/z/Eyasro8XJK45bHqDhEXowtYtC0024rrI1+WbMaEgdrI96ImedsDtbGWQt9Egwl+MfBi5RB4l+2sDlgco6DtTFU8PJgc8AUGgdr477IGXrGwdsbChyvQtzmYG14CZskzxwwucXBPUWH17Vgc8AUFAcPHL5i5snmgMknDh441LhckYjNwT1lhICpcluBiThgIg6YiAMmhzh4qaLp/nUZvjl4qTLO6NlyW4GJOGAiDphWj+PJdz69/KfTWzqOnmv/8etj2USWjqPfmokQxwmrJUIcp62TiND3kNay95HyXaUxlt4cLtd14kWydBzN7//7KRNZPY7mel/YEpmmEuJobcBzwxyJ8ED6n0/7uHmBt3+97hOrxHefy3r//n7/0o7bIgW++3z6T2w4JhJ5r7l/Xbit9Nr7WOdewwPpafcXSYkyGnFc5nKvEcdt5ZYL95pCSan8jFd18YukzM94Tf+CpdPLRMICcrkiPHP4m+ZxROt3ZWeyJXKsxLGYmHmyOYaru0jc4uCx47nIPryuBZsDprg4FnzsGCRskp5xcGdR4HgVQm8rLI/7ImfIMwdMznEk/kLuCoJ/64jNAZN/HCyPQeJ/Io3NAVNOHCyPs1ImNiQO3vCIN2LmabcVlke/rFmNioPlEWnQtAduDl62uEj8HefkVyv08VzufMbG0RM1fVh6JjP09s37HDBJfPc5y+NR+tpoOj/jRR9HCmU0qdsKfWx05qD1u7I6c8nSOYHZfleWPl6SKqMF31bo4wm1MprUM8fRan1onm90HP3ha85rhP4zDf4bq4TNQR9HsmW0rNsKfWyUy2itvX399iX+v7o5deEn+wxAiXPPfCA9dc4zrZASZbT0VysL9lGljJZ7W9mdvepFbzHlTlMijnZpK6TPrl/Rs1OJo129aygM8YnSJyUUR7vxVCEyzaMJzkUrjk31sVY//p1iHO3eC5PEERc9bItoHM3phWvAxKsc5wW6cWy83ttwn77sgTlSj6MNe+9L4f035TJaiTg2c7w9uhPPYlMmjs0EiZTIYiP6STBLocl+qtbxF9scu3IrpFYWm6px7MQrqdjErnwcG8FESmexmSSOXXolEzSxmy2OXXAlMzWxmzaOozXfwrpviTgeFf30TbBF40CPYm+CIRJxwEQcMBEHTMQBE3HARBwwEQdMxAETccBEHDARB0z/Av1mLwbxyhheAAAAAElFTkSuQmCC" />
+    <title>健身间歇训练计时器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f2f4f1;
+        --surface: #ffffff;
+        --surface-2: #e8ece7;
+        --ink: #131711;
+        --ink-2: #4c554b;
+        --ink-3: #7d877c;
+        --line: #d8ded6;
+        --work: #1d9e4b;
+        --work-soft: rgba(29, 158, 75, 0.12);
+        --rest: #2470d8;
+        --rest-soft: rgba(36, 112, 216, 0.12);
+        --prep: #d98a06;
+        --prep-soft: rgba(217, 138, 6, 0.14);
+        --accent: var(--work);
+        --accent-soft: var(--work-soft);
+        --danger: #d63a2f;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0c0f0c;
+          --surface: #161a16;
+          --surface-2: #20261f;
+          --ink: #f0f3ee;
+          --ink-2: #b7bfb4;
+          --ink-3: #7e887c;
+          --line: #2b332a;
+          --work: #2ecc66;
+          --work-soft: rgba(46, 204, 102, 0.14);
+          --rest: #4d94ff;
+          --rest-soft: rgba(77, 148, 255, 0.15);
+          --prep: #f5a623;
+          --prep-soft: rgba(245, 166, 35, 0.15);
+          color-scheme: dark;
+        }
+      }
+      body[data-phase="work"] { --accent: var(--work); --accent-soft: var(--work-soft); }
+      body[data-phase="rest"] { --accent: var(--rest); --accent-soft: var(--rest-soft); }
+      body[data-phase="prepare"] { --accent: var(--prep); --accent-soft: var(--prep-soft); }
+      body[data-phase="done"] { --accent: var(--work); --accent-soft: var(--work-soft); }
+
+      * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+      [hidden] { display: none !important; }
+      html { height: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Barlow", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+      button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+      button:focus-visible, input:focus-visible, textarea:focus-visible {
+        outline: 3px solid var(--accent); outline-offset: 2px;
+      }
+
+      /* ---------- top status bar ---------- */
+      .topbar {
+        display: flex; align-items: stretch; gap: 10px;
+        padding: 14px 16px 4px;
+        max-width: 760px; width: 100%; margin: 0 auto;
+      }
+      .stat {
+        flex: 1; background: var(--surface); border: 1px solid var(--line);
+        border-radius: 14px; padding: 8px 12px; text-align: center;
+      }
+      .stat .k {
+        font-size: 11px; letter-spacing: .14em; color: var(--ink-3);
+        font-weight: 600; text-transform: uppercase;
+      }
+      .stat .v {
+        font-family: "Barlow Condensed", "PingFang SC", sans-serif;
+        font-size: 26px; font-weight: 700; line-height: 1.1;
+        font-variant-numeric: tabular-nums;
+      }
+      .stat .v small { font-size: 15px; color: var(--ink-3); font-weight: 600; }
+
+      /* ---------- main stage ---------- */
+      .stage {
+        flex: 1 0 auto; display: flex; flex-direction: column; align-items: center;
+        justify-content: center; text-align: center;
+        padding: 8px 16px 0; width: 100%; max-width: 760px; margin: 0 auto;
+        min-height: 0;
+      }
+      .phase-label {
+        font-family: "Barlow Condensed", "PingFang SC", sans-serif;
+        font-weight: 700; letter-spacing: .22em;
+        font-size: clamp(30px, 8vw, 52px); line-height: 1;
+        color: var(--accent);
+        display: flex; align-items: center; gap: 14px;
+      }
+      .phase-label::before, .phase-label::after {
+        content: ""; height: 3px; width: clamp(22px, 7vw, 46px);
+        background: var(--accent); border-radius: 2px; opacity: .55;
+      }
+      .phase-cn { font-size: 15px; color: var(--ink-2); font-weight: 600; letter-spacing: .3em; margin-top: 6px; }
+
+      .exercise {
+        margin-top: 14px; min-height: 0;
+      }
+      .exercise .ex-name {
+        font-size: clamp(30px, 9vw, 54px); font-weight: 700; line-height: 1.15;
+        letter-spacing: .02em;
+      }
+      .exercise .ex-next {
+        margin-top: 6px; font-size: clamp(17px, 4.6vw, 22px);
+        color: var(--ink-2); font-weight: 600;
+      }
+      .exercise .ex-next b { color: var(--accent); font-size: 1.25em; }
+      .exercise .ex-side {
+        display: inline-block; margin-top: 8px; padding: 4px 14px;
+        background: var(--accent); color: #fff; border-radius: 999px;
+        font-weight: 700; font-size: 17px; letter-spacing: .08em;
+      }
+      .exercise[hidden] { display: none; }
+
+      .dial {
+        position: relative; margin-top: 6px;
+        width: min(78vw, 400px); aspect-ratio: 1 / 1;
+        display: grid; place-items: center;
+      }
+      .dial svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+      .dial .track { stroke: var(--surface-2); }
+      .dial .prog { stroke: var(--accent); transition: stroke .3s; }
+      .dial-inner { position: relative; z-index: 1; padding: 0 8px; width: 100%; }
+      .big-time {
+        font-family: "Barlow Condensed", "PingFang SC", sans-serif;
+        font-weight: 700; line-height: .95;
+        font-size: clamp(88px, 29vw, 176px);
+        font-variant-numeric: tabular-nums;
+        letter-spacing: .01em;
+      }
+      .big-time.final3 { color: var(--accent); animation: pulse .5s ease-in-out infinite alternate; }
+      @keyframes pulse { from { transform: scale(1); } to { transform: scale(1.06); } }
+      .dial-sub { font-size: 14px; color: var(--ink-2); font-weight: 600; margin-top: 2px; line-height: 1.5; max-width: 230px; margin-left: auto; margin-right: auto; }
+      .dial-sub b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+      .overall {
+        width: min(78vw, 400px); margin-top: 14px;
+      }
+      .overall .bar {
+        height: 8px; border-radius: 99px; background: var(--surface-2); overflow: hidden;
+      }
+      .overall .bar i {
+        display: block; height: 100%; width: 0%;
+        background: var(--accent); border-radius: 99px;
+      }
+      .overall .lbl {
+        display: flex; justify-content: space-between; margin-top: 6px;
+        font-size: 13px; color: var(--ink-3); font-weight: 600;
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* ---------- done state ---------- */
+      .done-box { display: none; }
+      body[data-phase="done"] .done-box { display: block; }
+      body[data-phase="done"] .dial, body[data-phase="done"] .overall { display: none; }
+      .done-box .trophy {
+        font-family: "Barlow Condensed", sans-serif; font-weight: 700;
+        font-size: clamp(44px, 11vw, 72px); line-height: 1.02; color: var(--work);
+        letter-spacing: .04em;
+      }
+      .done-box .sub { margin-top: 10px; font-size: 18px; color: var(--ink-2); font-weight: 600; }
+      .done-box .sub b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+      /* ---------- controls ---------- */
+      .controls {
+        display: flex; align-items: center; justify-content: center; gap: 14px;
+        padding: 18px 16px 8px; width: 100%; max-width: 760px; margin: 0 auto;
+      }
+      .ctl {
+        width: 58px; height: 58px; border-radius: 50%;
+        background: var(--surface); border: 1px solid var(--line);
+        display: grid; place-items: center; color: var(--ink-2);
+        transition: transform .08s, background .15s;
+      }
+      .ctl:active { transform: scale(.93); }
+      .ctl svg { width: 24px; height: 24px; }
+      .ctl:disabled { opacity: .35; pointer-events: none; }
+      .ctl-main {
+        width: 92px; height: 92px; border-radius: 50%;
+        background: var(--accent); color: #fff;
+        display: grid; place-items: center;
+        box-shadow: 0 10px 28px -8px var(--accent);
+        transition: transform .08s, background .25s;
+      }
+      .ctl-main:active { transform: scale(.94); }
+      .ctl-main svg { width: 36px; height: 36px; }
+      .ctl-main .lbl { font-size: 13px; font-weight: 700; letter-spacing: .18em; margin-top: 1px; }
+      .ctl-main .stack { display: flex; flex-direction: column; align-items: center; }
+
+      /* ---------- presets + settings ---------- */
+      .panel {
+        width: 100%; max-width: 760px; margin: 0 auto;
+        padding: 10px 16px calc(22px + env(safe-area-inset-bottom));
+      }
+      .presets { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+      .preset {
+        padding: 9px 16px; border-radius: 999px; font-weight: 600; font-size: 15px;
+        background: var(--surface); border: 1px solid var(--line); color: var(--ink-2);
+      }
+      .preset.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+      .settings-toggle {
+        display: flex; align-items: center; justify-content: center; gap: 8px;
+        width: 100%; margin-top: 14px; padding: 12px;
+        font-weight: 700; font-size: 16px; color: var(--ink-2);
+      }
+      .settings-toggle svg { width: 20px; height: 20px; transition: transform .2s; }
+      .settings-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+      .settings {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: 18px; padding: 6px 18px 14px; margin-top: 4px;
+      }
+      .settings[hidden] { display: none; }
+      .row {
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 13px 0; border-bottom: 1px solid var(--line);
+      }
+      .row:last-child { border-bottom: 0; }
+      .row .name { font-weight: 600; font-size: 16px; }
+      .row .hint { font-size: 12.5px; color: var(--ink-3); margin-top: 2px; line-height: 1.45; }
+      .stepper { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+      .stepper button {
+        width: 40px; height: 40px; border-radius: 12px; font-size: 22px; font-weight: 700;
+        background: var(--surface-2); color: var(--ink); display: grid; place-items: center;
+      }
+      .stepper button:active { transform: scale(.92); }
+      .stepper input {
+        width: 62px; height: 40px; text-align: center; border: 1px solid var(--line);
+        border-radius: 12px; background: var(--bg); color: var(--ink);
+        font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums;
+        -moz-appearance: textfield; appearance: textfield;
+      }
+      .stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; }
+      .stepper .unit { font-size: 13px; color: var(--ink-3); font-weight: 600; width: 16px; }
+      .switch {
+        width: 54px; height: 32px; border-radius: 999px; flex-shrink: 0;
+        background: var(--surface-2); position: relative; transition: background .2s;
+      }
+      .switch::after {
+        content: ""; position: absolute; top: 3px; left: 3px;
+        width: 26px; height: 26px; border-radius: 50%; background: #fff;
+        box-shadow: 0 1px 4px rgba(0,0,0,.25); transition: left .2s;
+      }
+      .switch[aria-checked="true"] { background: var(--work); }
+      .switch[aria-checked="true"]::after { left: 25px; }
+      .names-box { padding: 4px 0 12px; }
+      .names-box[hidden] { display: none; }
+      .names-box textarea {
+        width: 100%; min-height: 150px; resize: vertical;
+        border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px;
+        background: var(--bg); color: var(--ink); font: inherit; font-size: 16px; line-height: 1.7;
+      }
+      .total-line {
+        text-align: center; padding: 12px 0 2px; font-size: 14px; color: var(--ink-2); font-weight: 600;
+      }
+      .total-line b { color: var(--ink); font-variant-numeric: tabular-nums; }
+      .vol-ctl { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+      .vol-ctl input[type="range"] {
+        width: 132px; height: 32px; accent-color: var(--work); cursor: pointer;
+      }
+      .vol-val { font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; min-width: 46px; text-align: right; }
+      @media (max-width: 480px) { .vol-ctl input[type="range"] { width: 104px; } }
+
+
+      @media (prefers-reduced-motion: reduce) {
+        .big-time.final3 { animation: none; }
+        * { transition: none !important; }
+      }
+      @media (min-width: 700px) {
+        .dial { width: min(46vh, 420px); }
+        .overall { width: min(46vh, 420px); }
+      }
+    </style>
+  </head>
+  <body data-phase="idle">
+    <!-- status -->
+    <div class="topbar">
+      <div class="stat">
+        <div class="k">组数 Round</div>
+        <div class="v"><span id="roundNow">--</span><small> / </small><span id="roundTotal">16</span></div>
+      </div>
+      <div class="stat">
+        <div class="k">总剩余 Total Left</div>
+        <div class="v" id="totalLeft">11:45</div>
+      </div>
+      <div class="stat">
+        <div class="k">总时长 Total</div>
+        <div class="v" id="totalAll">11:45</div>
+      </div>
+    </div>
+
+    <!-- stage -->
+    <main class="stage">
+      <div>
+        <div class="phase-label" id="phaseLabel">READY</div>
+        <div class="phase-cn" id="phaseCn">准备开始</div>
+      </div>
+
+      <div class="exercise" id="exerciseBox" hidden>
+        <div class="ex-name" id="exName"></div>
+        <div class="ex-next" id="exNext"></div>
+        <div><span class="ex-side" id="exSide" hidden>换另一边</span></div>
+      </div>
+
+      <div class="dial" id="dial">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="track" cx="50" cy="50" r="46" fill="none" stroke-width="5" />
+          <circle class="prog" id="ringProg" cx="50" cy="50" r="46" fill="none" stroke-width="5"
+                  stroke-linecap="round" stroke-dasharray="289.03" stroke-dashoffset="0" />
+        </svg>
+        <div class="dial-inner">
+          <div class="big-time" id="bigTime">0:30</div>
+          <div class="dial-sub" id="dialSub">每组 <b>30 秒</b> · 休息 <b>15 秒</b></div>
+        </div>
+      </div>
+
+      <div class="done-box">
+        <div class="trophy">WORKOUT<br />COMPLETE</div>
+        <div class="sub">训练完成 🎉 实际用时 <b id="doneTime">11:45</b></div>
+      </div>
+
+      <div class="overall">
+        <div class="bar"><i id="overallBar"></i></div>
+        <div class="lbl"><span>整体进度</span><span id="overallPct">0%</span></div>
+      </div>
+    </main>
+
+    <!-- controls -->
+    <div class="controls">
+      <button class="ctl" id="btnReset" aria-label="重置" title="重置">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 2.6-6.3"/><path d="M3 4v5h5"/></svg>
+      </button>
+      <button class="ctl-main" id="btnMain" aria-label="开始">
+        <span class="stack">
+          <svg id="icoPlay" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
+          <svg id="icoPause" viewBox="0 0 24 24" fill="currentColor" hidden><rect x="6" y="5" width="4.5" height="14" rx="1.2"/><rect x="13.5" y="5" width="4.5" height="14" rx="1.2"/></svg>
+          <span class="lbl" id="mainLbl">开始</span>
+        </span>
+      </button>
+      <button class="ctl" id="btnSkip" aria-label="跳过这一段" title="跳过这一段">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 5.5v13l8.5-6.5z"/><rect x="15" y="5" width="4" height="14" rx="1"/></svg>
+      </button>
+      <button class="ctl" id="btnFull" aria-label="全屏" title="全屏">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+    </div>
+
+    <!-- presets & settings -->
+    <div class="panel">
+      <div class="presets" role="group" aria-label="快捷方案">
+        <button class="preset on" data-preset="default">腹部核心 30 / 15 × 16</button>
+        <button class="preset" data-preset="tabata">Tabata 20 / 10 × 8</button>
+        <button class="preset" data-preset="hiit">HIIT 40 / 20 × 10</button>
+        <button class="preset" data-preset="easy">轻松 20 / 20 × 10</button>
+      </div>
+
+      <button class="settings-toggle" id="settingsToggle" aria-expanded="false">
+        训练设置
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+
+      <div class="settings" id="settingsBox" hidden>
+        <div class="row">
+          <div><div class="name">训练时间 WORK</div></div>
+          <div class="stepper">
+            <button data-step="work,-5" aria-label="训练时间减少">−</button>
+            <input id="inWork" type="number" inputmode="numeric" min="1" max="3600" value="30" aria-label="训练时间，秒" />
+            <button data-step="work,5" aria-label="训练时间增加">+</button>
+            <span class="unit">秒</span>
+          </div>
+        </div>
+        <div class="row">
+          <div><div class="name">休息时间 REST</div></div>
+          <div class="stepper">
+            <button data-step="rest,-5" aria-label="休息时间减少">−</button>
+            <input id="inRest" type="number" inputmode="numeric" min="0" max="3600" value="15" aria-label="休息时间，秒" />
+            <button data-step="rest,5" aria-label="休息时间增加">+</button>
+            <span class="unit">秒</span>
+          </div>
+        </div>
+        <div class="row">
+          <div><div class="name">训练组数</div></div>
+          <div class="stepper">
+            <button data-step="sets,-1" aria-label="组数减少">−</button>
+            <input id="inSets" type="number" inputmode="numeric" min="1" max="99" value="16" aria-label="训练组数" />
+            <button data-step="sets,1" aria-label="组数增加">+</button>
+            <span class="unit">组</span>
+          </div>
+        </div>
+        <div class="row">
+          <div><div class="name">开始前准备倒数</div></div>
+          <div class="stepper">
+            <button data-step="prepare,-1" aria-label="准备时间减少">−</button>
+            <input id="inPrepare" type="number" inputmode="numeric" min="0" max="60" value="5" aria-label="开始前准备倒数，秒" />
+            <button data-step="prepare,1" aria-label="准备时间增加">+</button>
+            <span class="unit">秒</span>
+          </div>
+        </div>
+        <div class="row">
+          <div><div class="name">提示音</div></div>
+          <button class="switch" id="swSound" role="switch" aria-checked="true" aria-label="提示音开关"></button>
+        </div>
+        <div class="row">
+          <div><div class="name">音量</div></div>
+          <div class="vol-ctl">
+            <input id="inVolume" type="range" min="0" max="100" step="5" value="85" aria-label="提示音音量" />
+            <span class="vol-val" id="volVal">85%</span>
+          </div>
+        </div>
+        <div class="row">
+          <div><div class="name">每秒滴答声</div></div>
+          <button class="switch" id="swTick" role="switch" aria-checked="true" aria-label="每秒滴答声开关"></button>
+        </div>
+        <div class="row">
+          <div><div class="name">测试声音</div></div>
+          <button class="preset" id="btnTestSound" type="button">▶ 试听</button>
+        </div>
+        <div class="row">
+          <div><div class="name">语音播报</div></div>
+          <button class="switch" id="swVoice" role="switch" aria-checked="true" aria-label="语音播报开关"></button>
+        </div>
+        <div class="row">
+          <div><div class="name">震动提示</div></div>
+          <button class="switch" id="swVibrate" role="switch" aria-checked="true" aria-label="震动开关"></button>
+        </div>
+        <div class="row">
+          <div><div class="name">显示动作名称</div></div>
+          <button class="switch" id="swNames" role="switch" aria-checked="false" aria-label="动作名称开关"></button>
+        </div>
+        <div class="names-box" id="namesBox" hidden>
+          <textarea id="inNames" aria-label="动作名称列表，每行一个">卷腹
+反向卷腹
+自行车卷腹
+俄罗斯转体
+登山者
+死虫式
+仰卧抬腿
+平板支撑
+卷腹
+反向卷腹
+自行车卷腹
+俄罗斯转体
+登山者
+死虫式
+仰卧抬腿
+平板支撑</textarea>
+          
+        </div>
+        <div class="total-line" id="totalLine"></div>
+      </div>
+
+    </div>
+
+    <script>
+      "use strict";
+      /* ============ settings ============ */
+      var LS_KEY = "hiit-timer-settings-v2";
+      var settings = {
+        work: 30, rest: 15, sets: 16, prepare: 5,
+        sound: true, tickSound: true, voice: true, vibrate: true, volume: 85,
+        showNames: false,
+        names: ["卷腹","反向卷腹","自行车卷腹","俄罗斯转体","登山者","死虫式","仰卧抬腿","平板支撑",
+                "卷腹","反向卷腹","自行车卷腹","俄罗斯转体","登山者","死虫式","仰卧抬腿","平板支撑"]
+      };
+      try {
+        var saved = JSON.parse(localStorage.getItem(LS_KEY) || "null");
+        if (saved && typeof saved === "object") {
+          for (var k in settings) if (saved[k] !== undefined) settings[k] = saved[k];
+        }
+      } catch (e) {}
+      function saveSettings() {
+        try { localStorage.setItem(LS_KEY, JSON.stringify(settings)); } catch (e) {}
+      }
+      function clampNum(v, lo, hi, dflt) {
+        v = parseInt(v, 10);
+        if (isNaN(v)) return dflt;
+        return Math.min(hi, Math.max(lo, v));
+      }
+      function sanitize() {
+        settings.work = clampNum(settings.work, 1, 3600, 30);
+        settings.rest = clampNum(settings.rest, 0, 3600, 15);
+        settings.sets = clampNum(settings.sets, 1, 99, 16);
+        settings.prepare = clampNum(settings.prepare, 0, 60, 5);
+        settings.volume = clampNum(settings.volume, 0, 100, 85);
+      }
+      sanitize();
+
+      function totalDuration() {
+        return settings.prepare + settings.work * settings.sets +
+               (settings.rest > 0 ? settings.rest * (settings.sets - 1) : 0);
+      }
+      function fmt(sec) {
+        sec = Math.max(0, Math.round(sec));
+        var m = Math.floor(sec / 60), s = sec % 60;
+        return m + ":" + (s < 10 ? "0" : "") + s;
+      }
+      function fmtClock(sec) {
+        sec = Math.max(0, Math.ceil(sec));
+        var m = Math.floor(sec / 60), s = sec % 60;
+        if (m >= 60) { var h = Math.floor(m / 60); return h + ":" + (m % 60 < 10 ? "0" : "") + (m % 60) + ":" + (s < 10 ? "0" : "") + s; }
+        return m + ":" + (s < 10 ? "0" : "") + s;
+      }
+      function nameForSet(i) { // i: 0-based
+        if (!settings.names.length) return "";
+        return settings.names[i % settings.names.length] || "";
+      }
+
+      /* ============ audio ============ */
+      // Sound design: quality first, loud enough second.
+      // Signal chain: tone -> master gain (user volume slider) -> gentle
+      // compressor -> destination. Each tone is a soft triangle/sine voice
+      // in the comfortable 880-1320 Hz band with a quiet octave layer for
+      // presence on a small phone speaker, shaped by a smooth
+      // attack/release envelope so notes never click, pop or cut off
+      // abruptly. Peak levels stay well below full scale and the
+      // compressor is only a safety net, so nothing clips or turns harsh
+      // even with the volume slider near the top.
+      var actx = null, masterGain = null;
+      function volumeScale() { return clampNum(settings.volume, 0, 100, 85) / 100 * 0.9; }
+      function applyVolume() {
+        if (actx && masterGain) masterGain.gain.setTargetAtTime(volumeScale(), actx.currentTime, 0.02);
+      }
+      function ensureAudio() {
+        if (!actx) {
+          try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {}
+          if (actx) {
+            try {
+              var comp = actx.createDynamicsCompressor();
+              comp.threshold.value = -18; comp.knee.value = 30; comp.ratio.value = 3;
+              comp.attack.value = 0.004; comp.release.value = 0.24;
+              masterGain = actx.createGain();
+              masterGain.gain.value = volumeScale();
+              masterGain.connect(comp); comp.connect(actx.destination);
+            } catch (e) { masterGain = null; }
+            // Play a silent buffer inside the tap gesture. This unlocks the
+            // audio channel on iOS, where AudioContext-only beeps after the
+            // first gesture tend to stay silent (most noticeably when the
+            // page was opened inside an app's in-app browser).
+            try {
+              var buf = actx.createBuffer(1, 1, 22050);
+              var src = actx.createBufferSource();
+              src.buffer = buf; src.connect(actx.destination); src.start(0);
+            } catch (e) {}
+          }
+        }
+        if (actx && actx.state === "suspended") actx.resume();
+        applyVolume();
+      }
+      // One soft musical tone. opts: { delay, dur, vol, attack, type }.
+      // A triangle/sine fundamental carries the note; a sine one octave up
+      // at low level adds just enough presence to read clearly on a phone
+      // speaker. The gain envelope rises gently and decays smoothly to
+      // near zero before the oscillator stops, so there are no clicks.
+      function tone(freq, opts) {
+        if (!settings.sound || !actx) return;
+        // iOS can leave the context suspended/interrupted mid-workout
+        // (TTS announcements, notifications, standalone-mode restore).
+        // Without a fresh resume attempt, every later tone is scheduled
+        // against a frozen clock and stays silent — the quiet per-second
+        // tick is the first casualty, and the rest turn intermittent.
+        if (actx.state !== "running") { try { actx.resume(); } catch (e) {} }
+        opts = opts || {};
+        var t0 = actx.currentTime + (opts.delay || 0) + 0.01;
+        var dur = opts.dur || 0.15;
+        var peak = Math.min(0.9, Math.max(0.001, opts.vol || 0.5));
+        var atk = Math.min(opts.attack || 0.015, dur / 2);
+        var rel = Math.min(0.09, Math.max(0.03, dur * 0.45));
+        var out = actx.createGain();
+        var g = out.gain;
+        g.setValueAtTime(0.0001, t0);
+        g.exponentialRampToValueAtTime(peak, t0 + atk);
+        g.setValueAtTime(peak, t0 + Math.max(atk, dur - rel));
+        g.exponentialRampToValueAtTime(0.0001, t0 + dur);
+        out.connect(masterGain || actx.destination);
+        var o1 = actx.createOscillator();
+        o1.type = opts.type || "triangle"; o1.frequency.value = freq;
+        o1.connect(out);
+        var o2 = actx.createOscillator();
+        o2.type = "sine"; o2.frequency.value = freq * 2;
+        var g2 = actx.createGain(); g2.gain.value = 0.15;
+        o2.connect(g2); g2.connect(out);
+        o1.start(t0); o2.start(t0);
+        o1.stop(t0 + dur + 0.1); o2.stop(t0 + dur + 0.1);
+      }
+      // Per-second tick: a clear, soft "滴答" that marks each second.
+      // A triangle fundamental carries gentle harmonics, so the tick
+      // stays present on a small phone speaker across a room without
+      // turning harsh; the smooth envelope keeps it click-free.
+      function sndSecondTick(at) { if (settings.tickSound) tone(1175, { delay: at, dur: 0.085, vol: 0.45, attack: 0.005, type: "triangle" }); }
+      // Final-3-seconds beep: same soft family, longer and one step higher
+      // so it reads as "pay attention" without turning shrill.
+      function sndTick(at) { tone(1319, { delay: at, dur: 0.18, vol: 0.55 }); }
+      // Phase changes: pleasant two-note cues — rising for WORK, falling for REST.
+      function sndWork(at) { at = at || 0; tone(988, { delay: at, dur: 0.17, vol: 0.55 }); tone(1319, { delay: at + 0.15, dur: 0.3, vol: 0.55 }); }
+      function sndRest(at) { at = at || 0; tone(1175, { delay: at, dur: 0.18, vol: 0.5 }); tone(880, { delay: at + 0.16, dur: 0.32, vol: 0.5 }); }
+      // Finish: a clean three-note rise.
+      function sndDone(at) { at = at || 0; tone(880, { delay: at, dur: 0.2, vol: 0.6 }); tone(1109, { delay: at + 0.17, dur: 0.2, vol: 0.6 }); tone(1319, { delay: at + 0.34, dur: 0.55, vol: 0.6 }); }
+
+      /* ============ voice ============ */
+      var zhVoice = null;
+      function pickVoice() {
+        if (!("speechSynthesis" in window)) return;
+        var vs = speechSynthesis.getVoices();
+        zhVoice = null;
+        for (var i = 0; i < vs.length; i++) {
+          var l = (vs[i].lang || "").toLowerCase();
+          if (l.indexOf("zh-hk") === 0 || l.indexOf("yue") === 0) { zhVoice = vs[i]; break; }
+        }
+        if (!zhVoice) for (var j = 0; j < vs.length; j++) {
+          if ((vs[j].lang || "").toLowerCase().indexOf("zh") === 0) { zhVoice = vs[j]; break; }
+        }
+      }
+      if ("speechSynthesis" in window) {
+        pickVoice();
+        speechSynthesis.onvoiceschanged = pickVoice;
+      }
+      function speak(text, interrupt) {
+        if (!settings.voice || !("speechSynthesis" in window)) return;
+        try {
+          if (interrupt) speechSynthesis.cancel();
+          var u = new SpeechSynthesisUtterance(text);
+          if (zhVoice) u.voice = zhVoice;
+          u.lang = zhVoice ? zhVoice.lang : "zh-CN";
+          u.volume = 1;
+          u.rate = 1.08;
+          speechSynthesis.speak(u);
+        } catch (e) {}
+      }
+      function vibrate(pattern) {
+        if (settings.vibrate && navigator.vibrate) { try { navigator.vibrate(pattern); } catch (e) {} }
+      }
+
+      /* ============ wake lock ============ */
+      var wakeLock = null;
+      function lockScreen(on) {
+        if (!("wakeLock" in navigator)) return;
+        if (on) {
+          navigator.wakeLock.request("screen").then(function (wl) { wakeLock = wl; }).catch(function () {});
+        } else if (wakeLock) {
+          wakeLock.release().catch(function () {}); wakeLock = null;
+        }
+      }
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "visible" && state.running) lockScreen(true);
+      });
+
+      /* ============ timer core (timestamp based, no drift) ============ */
+      var state = {
+        status: "idle",          // idle | running | paused | done
+        running: false,
+        phases: [],              // [{type:'prepare'|'work'|'rest', set:1-based, dur:sec}]
+        idx: 0,
+        endsAt: 0,               // ms timestamp when current phase ends
+        remainMs: 0,             // remaining when paused
+        lastShownSec: -1,
+        halfSpoken: false,
+        timerId: null,
+        startedTotal: 0
+      };
+
+      function buildPhases() {
+        var p = [];
+        if (settings.prepare > 0) p.push({ type: "prepare", set: 0, dur: settings.prepare });
+        for (var i = 1; i <= settings.sets; i++) {
+          p.push({ type: "work", set: i, dur: settings.work });
+          if (i < settings.sets && settings.rest > 0) p.push({ type: "rest", set: i, dur: settings.rest });
+        }
+        return p;
+      }
+      function phasesLeftMs(fromIdx, extraMsInCurrent) {
+        var ms = extraMsInCurrent || 0;
+        for (var i = fromIdx + 1; i < state.phases.length; i++) ms += state.phases[i].dur * 1000;
+        return ms;
+      }
+
+      var $ = function (id) { return document.getElementById(id); };
+      var el = {
+        body: document.body, phaseLabel: $("phaseLabel"), phaseCn: $("phaseCn"),
+        bigTime: $("bigTime"), dialSub: $("dialSub"), ring: $("ringProg"),
+        roundNow: $("roundNow"), roundTotal: $("roundTotal"),
+        totalLeft: $("totalLeft"), totalAll: $("totalAll"),
+        overallBar: $("overallBar"), overallPct: $("overallPct"),
+        exBox: $("exerciseBox"), exName: $("exName"), exNext: $("exNext"), exSide: $("exSide"),
+        btnMain: $("btnMain"), icoPlay: $("icoPlay"), icoPause: $("icoPause"), mainLbl: $("mainLbl"),
+        btnSkip: $("btnSkip"), doneTime: $("doneTime")
+      };
+      var CIRC = 289.03;
+      var PHASE_TXT = {
+        idle:    ["READY", "准备开始"],
+        prepare: ["GET READY", "准备 · 摆好姿势"],
+        work:    ["WORK", "训练"],
+        rest:    ["REST", "休息"],
+        done:    ["", ""]
+      };
+
+      function curPhase() { return state.phases[state.idx] || null; }
+
+      function renderStatic() {
+        el.roundTotal.textContent = settings.sets;
+        el.totalAll.textContent = fmt(totalDuration());
+        el.totalLeft.textContent = fmt(totalDuration());
+        el.dialSub.innerHTML = "训练 <b>" + settings.work + " 秒</b> · 休息 <b>" + settings.rest + " 秒</b> · <b>" + settings.sets + " 组</b>" +
+          (settings.prepare > 0 ? " · 准备 <b>" + settings.prepare + " 秒</b>" : "");
+        $("totalLine").innerHTML = "预计总时长 <b>" + fmt(totalDuration()) + "</b>（训练 " + fmt(settings.work * settings.sets) +
+          " + 休息 " + fmt(settings.rest * Math.max(0, settings.sets - 1)) +
+          (settings.prepare > 0 ? " + 准备 " + settings.prepare + " 秒" : "") + "）";
+        if (state.status === "idle") {
+          el.bigTime.textContent = fmt(settings.work);
+          el.roundNow.textContent = "--";
+          el.ring.style.strokeDashoffset = "0";
+          el.overallBar.style.width = "0%";
+          el.overallPct.textContent = "0%";
+          renderExerciseIdle();
+        }
+      }
+      function renderExerciseIdle() {
+        if (!settings.showNames) { el.exBox.hidden = true; return; }
+        el.exBox.hidden = false;
+        el.exName.textContent = nameForSet(0);
+        el.exNext.innerHTML = "第一组动作";
+        el.exSide.hidden = true;
+      }
+      function renderExercise(ph) {
+        if (!settings.showNames) { el.exBox.hidden = true; return; }
+        el.exBox.hidden = false;
+        if (ph.type === "work") {
+          el.exName.textContent = nameForSet(ph.set - 1);
+          var nx = nameForSet(ph.set);
+          el.exNext.innerHTML = ph.set < settings.sets ? "下一个：<b>" + nx + "</b>" : "最后一组，加油！";
+        } else if (ph.type === "rest") {
+          el.exName.textContent = "";
+          el.exNext.innerHTML = "下一个动作：<b>" + nameForSet(ph.set) + "</b>，准备好姿势";
+        } else {
+          el.exName.textContent = nameForSet(0);
+          el.exNext.innerHTML = "准备开始";
+        }
+      }
+      function sideHintFor(ph) {
+        if (!settings.showNames || ph.type !== "work") return false;
+        var n = nameForSet(ph.set - 1);
+        return n.indexOf("侧") >= 0 || n.indexOf("左右") >= 0;
+      }
+
+      function setPhaseUI(ph) {
+        var key = state.status === "idle" ? "idle" : ph.type;
+        el.body.dataset.phase = state.status === "done" ? "done" : key;
+        var t = PHASE_TXT[key] || PHASE_TXT.idle;
+        el.phaseLabel.textContent = t[0];
+        el.phaseCn.textContent = t[1];
+        el.exSide.hidden = true;
+        state.halfSpoken = false;
+        renderExercise(ph);
+        if (ph.type === "work" || ph.type === "rest") {
+          el.roundNow.textContent = (ph.set < 10 ? "0" : "") + ph.set;
+        } else if (ph.type === "prepare") {
+          el.roundNow.textContent = "--";
+        }
+      }
+
+      function startPhase(idx, announce) {
+        state.idx = idx;
+        var ph = curPhase();
+        if (!ph) { finishWorkout(); return; }
+        state.endsAt = Date.now() + ph.dur * 1000;
+        state.lastShownSec = -1;
+        setPhaseUI(ph);
+        if (announce) announcePhase(ph);
+        tick();
+      }
+      function announcePhase(ph) {
+        if (ph.type === "work") {
+          sndWork(); vibrate([90, 60, 90]);
+          var msg = "开始";
+          if (settings.showNames) {
+            var n = nameForSet(ph.set - 1);
+            if (n) msg = n + "，开始";
+          }
+          speak(msg, true);
+        } else if (ph.type === "rest") {
+          sndRest(); vibrate(160);
+          var rmsg = "休息";
+          if (settings.showNames) {
+            var nx = nameForSet(ph.set);
+            if (nx) rmsg = "休息，下一个，" + nx;
+          }
+          speak(rmsg, true);
+        } else if (ph.type === "prepare") {
+          speak("准备", true);
+        }
+      }
+
+      function tick() {
+        if (!state.running) return;
+        var now = Date.now();
+        var remain = state.endsAt - now;
+        var ph = curPhase();
+        if (!ph) { finishWorkout(); return; }
+
+        if (remain <= 0) { startPhase(state.idx + 1, true); return; }
+
+        var remainSec = remain / 1000;
+        var shown = Math.ceil(remainSec);
+        if (shown !== state.lastShownSec) {
+          state.lastShownSec = shown;
+          el.bigTime.textContent = fmt(remainSec);
+          // last 3 seconds: beep + voice count
+          if ((ph.type === "work" || ph.type === "rest" || ph.type === "prepare") && shown <= 3 && shown >= 1) {
+            el.bigTime.classList.add("final3");
+            sndTick();
+            speak(String(shown), false);
+            vibrate(40);
+          } else {
+            el.bigTime.classList.remove("final3");
+            // steady per-second tick so the passing time is audible
+            // throughout the phase, not only at transitions
+            // (skip the phase's first displayed second: the transition
+            // beep already sounds there)
+            if (shown < ph.dur) sndSecondTick();
+          }
+          // total remaining
+          el.totalLeft.textContent = fmtClock(phasesLeftMs(state.idx, remain) / 1000);
+          // overall progress
+          var total = state.startedTotal * 1000;
+          var left = phasesLeftMs(state.idx, remain);
+          var pct = total > 0 ? Math.min(100, Math.max(0, (1 - left / total) * 100)) : 0;
+          el.overallBar.style.width = pct.toFixed(1) + "%";
+          el.overallPct.textContent = Math.floor(pct) + "%";
+        }
+        // ring progress (smooth, every tick)
+        var frac = Math.min(1, Math.max(0, remain / (ph.dur * 1000)));
+        el.ring.style.strokeDashoffset = String(CIRC * (1 - frac));
+        // halfway side-switch hint
+        if (!state.halfSpoken && sideHintFor(ph) && remainSec <= ph.dur / 2) {
+          state.halfSpoken = true;
+          el.exSide.hidden = false;
+          speak("换边", false);
+          vibrate([60, 50, 60]);
+        }
+      }
+      function loop() {
+        state.timerId = setInterval(tick, 50);
+      }
+
+      function startWorkout() {
+        sanitize();
+        ensureAudio();
+        // a silent utterance inside the tap unlocks TTS on iOS
+        if (settings.voice && "speechSynthesis" in window) {
+          try { var u = new SpeechSynthesisUtterance(" "); u.volume = 0; speechSynthesis.speak(u); } catch (e) {}
+        }
+        state.phases = buildPhases();
+        state.startedTotal = totalDuration();
+        state.status = "running"; state.running = true;
+        el.btnMain.setAttribute("aria-label", "暂停");
+        el.icoPlay.hidden = true; el.icoPause.hidden = false; el.mainLbl.textContent = "暂停";
+        el.btnSkip.disabled = false;
+        lockScreen(true);
+        startPhase(0, true);
+        clearInterval(state.timerId); loop();
+      }
+      function pauseWorkout() {
+        if (!state.running) return;
+        state.remainMs = Math.max(0, state.endsAt - Date.now());
+        state.running = false; state.status = "paused";
+        clearInterval(state.timerId);
+        if ("speechSynthesis" in window) speechSynthesis.cancel();
+        el.icoPlay.hidden = false; el.icoPause.hidden = true; el.mainLbl.textContent = "继续";
+        el.btnMain.setAttribute("aria-label", "继续");
+        el.phaseCn.textContent = "已暂停 · " + el.phaseCn.textContent.replace("已暂停 · ", "");
+        lockScreen(false);
+      }
+      function resumeWorkout() {
+        ensureAudio();
+        state.endsAt = Date.now() + state.remainMs;
+        state.running = true; state.status = "running";
+        el.icoPlay.hidden = true; el.icoPause.hidden = false; el.mainLbl.textContent = "暂停";
+        el.btnMain.setAttribute("aria-label", "暂停");
+        var ph = curPhase(); if (ph) setPhaseUI(ph);
+        lockScreen(true);
+        clearInterval(state.timerId); loop(); tick();
+      }
+      function resetWorkout() {
+        state.running = false; state.status = "idle";
+        clearInterval(state.timerId);
+        if ("speechSynthesis" in window) speechSynthesis.cancel();
+        el.body.dataset.phase = "idle";
+        el.phaseLabel.textContent = PHASE_TXT.idle[0];
+        el.phaseCn.textContent = PHASE_TXT.idle[1];
+        el.bigTime.classList.remove("final3");
+        el.icoPlay.hidden = false; el.icoPause.hidden = true; el.mainLbl.textContent = "开始";
+        el.btnMain.setAttribute("aria-label", "开始");
+        el.btnSkip.disabled = true;
+        lockScreen(false);
+        renderStatic();
+      }
+      function finishWorkout() {
+        state.running = false; state.status = "done";
+        clearInterval(state.timerId);
+        el.body.dataset.phase = "done";
+        el.phaseLabel.textContent = "";
+        el.phaseCn.textContent = "";
+        el.exBox.hidden = true;
+        el.doneTime.textContent = fmt(state.startedTotal);
+        el.totalLeft.textContent = "0:00";
+        el.overallBar.style.width = "100%";
+        el.overallPct.textContent = "100%";
+        el.icoPlay.hidden = false; el.icoPause.hidden = true; el.mainLbl.textContent = "再来一次";
+        el.btnMain.setAttribute("aria-label", "再来一次");
+        el.btnSkip.disabled = true;
+        sndDone(); vibrate([200, 100, 200, 100, 320]);
+        speak("训练完成，做得好", true);
+        lockScreen(false);
+      }
+
+      el.btnMain.addEventListener("click", function () {
+        if (state.status === "idle" || state.status === "done") startWorkout();
+        else if (state.running) pauseWorkout();
+        else if (state.status === "paused") resumeWorkout();
+      });
+      $("btnReset").addEventListener("click", resetWorkout);
+      el.btnSkip.disabled = true;
+      el.btnSkip.addEventListener("click", function () {
+        if (state.running) startPhase(state.idx + 1, true);
+        else if (state.status === "paused") {
+          state.idx += 1;
+          var ph = curPhase();
+          if (!ph) { finishWorkout(); return; }
+          state.remainMs = ph.dur * 1000;
+          state.lastShownSec = -1;
+          setPhaseUI(ph);
+          el.bigTime.textContent = fmt(ph.dur);
+        }
+      });
+      $("btnFull").addEventListener("click", function () {
+        try {
+          if (document.fullscreenElement) document.exitFullscreen();
+          else if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
+        } catch (e) {}
+      });
+
+      /* ============ settings UI ============ */
+      var inputs = { work: $("inWork"), rest: $("inRest"), sets: $("inSets"), prepare: $("inPrepare") };
+      function syncInputs() {
+        inputs.work.value = settings.work;
+        inputs.rest.value = settings.rest;
+        inputs.sets.value = settings.sets;
+        inputs.prepare.value = settings.prepare;
+        $("inVolume").value = settings.volume;
+        $("volVal").textContent = settings.volume + "%";
+        $("swSound").setAttribute("aria-checked", String(settings.sound));
+        $("swTick").setAttribute("aria-checked", String(settings.tickSound));
+        $("swVoice").setAttribute("aria-checked", String(settings.voice));
+        $("swVibrate").setAttribute("aria-checked", String(settings.vibrate));
+        $("swNames").setAttribute("aria-checked", String(settings.showNames));
+        $("namesBox").hidden = !settings.showNames;
+        $("inNames").value = settings.names.join("\n");
+      }
+      function applySettings(fromPreset) {
+        sanitize(); saveSettings(); syncInputs(); markPreset(fromPreset);
+        if (state.status === "idle" || state.status === "done") { resetWorkout(); }
+        else renderStatic();
+      }
+      Object.keys(inputs).forEach(function (key) {
+        inputs[key].addEventListener("change", function () {
+          settings[key] = clampNum(inputs[key].value, key === "sets" ? 1 : 0, key === "sets" ? 99 : 3600, settings[key]);
+          applySettings(null);
+        });
+      });
+      document.querySelectorAll("[data-step]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var parts = b.getAttribute("data-step").split(",");
+          var key = parts[0], d = parseInt(parts[1], 10);
+          settings[key] = (parseInt(settings[key], 10) || 0) + d;
+          applySettings(null);
+        });
+      });
+      function bindSwitch(id, key) {
+        $(id).addEventListener("click", function () {
+          settings[key] = !settings[key];
+          if (key === "sound" && settings.sound) { ensureAudio(); sndWork(); }
+          if (key === "tickSound" && settings.tickSound) { ensureAudio(); sndSecondTick(); setTimeout(sndSecondTick, 300); }
+          applySettings(undefined);
+        });
+      }
+      bindSwitch("swSound", "sound");
+      bindSwitch("swTick", "tickSound");
+      $("inVolume").addEventListener("input", function () {
+        settings.volume = clampNum(this.value, 0, 100, 100);
+        $("volVal").textContent = settings.volume + "%";
+        saveSettings();
+        applyVolume();
+      });
+      $("inVolume").addEventListener("change", function () {
+        // one clear beep on release so the new level can be heard right away
+        ensureAudio();
+        var wasSound = settings.sound; settings.sound = true;
+        sndTick();
+        settings.sound = wasSound;
+      });
+      $("btnTestSound").addEventListener("click", function () {
+        ensureAudio();
+        // audition all three sound families in turn: the per-second tick,
+        // a phase-change cue, then the finish cue. Play them directly so
+        // the test works even if a toggle is off (tones are scheduled
+        // immediately, so restoring the flags is safe)
+        var wasSound = settings.sound, wasTick = settings.tickSound;
+        settings.sound = true; settings.tickSound = true;
+        sndSecondTick(0); sndSecondTick(0.35); sndSecondTick(0.7);
+        sndWork(1.15);
+        sndDone(2.0);
+        settings.sound = wasSound; settings.tickSound = wasTick;
+      });
+      bindSwitch("swVoice", "voice");
+      bindSwitch("swVibrate", "vibrate");
+      bindSwitch("swNames", "showNames");
+      $("inNames").addEventListener("change", function () {
+        settings.names = $("inNames").value.split("\n").map(function (s) { return s.trim(); }).filter(Boolean);
+        applySettings(undefined);
+      });
+      $("settingsToggle").addEventListener("click", function () {
+        var box = $("settingsBox");
+        var open = box.hidden;
+        box.hidden = !open;
+        this.setAttribute("aria-expanded", String(open));
+      });
+
+      /* presets */
+      var PRESETS = {
+        default: { work: 30, rest: 15, sets: 16 },
+        tabata:  { work: 20, rest: 10, sets: 8 },
+        hiit:    { work: 40, rest: 20, sets: 10 },
+        easy:    { work: 20, rest: 20, sets: 10 }
+      };
+      function markPreset(name) {
+        document.querySelectorAll(".preset").forEach(function (p) {
+          var pr = PRESETS[p.getAttribute("data-preset")];
+          var match = name ? p.getAttribute("data-preset") === name
+            : pr && pr.work === settings.work && pr.rest === settings.rest && pr.sets === settings.sets;
+          p.classList.toggle("on", !!match);
+        });
+      }
+      document.querySelectorAll(".preset").forEach(function (p) {
+        p.addEventListener("click", function () {
+          var pr = PRESETS[p.getAttribute("data-preset")];
+          if (!pr) return;
+          settings.work = pr.work; settings.rest = pr.rest; settings.sets = pr.sets;
+          applySettings(p.getAttribute("data-preset"));
+        });
+      });
+
+      syncInputs();
+      markPreset();
+      renderStatic();
+    </script>
+  </body>
+</html>
